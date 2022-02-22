@@ -48,7 +48,6 @@ body {
   width: 60vw;
   height: calc(60vw * 1.4);
   border-radius: 15px;
-  border: 1px solid aqua;
   background: aquamarine;
   transition: 2s;
   box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
@@ -63,18 +62,22 @@ body {
 
 
 h1 {
-  font-size: 9vw;
+  font-size: 10vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 span {
   font-size: 6vw;
   display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2 {
   writing-mode: vertical-rl;
   font-size: 4vw;
   margin: 1vw;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .card a {
@@ -202,6 +205,7 @@ h2 {
         
         h1 {
         font-size: 50px;
+        font-family: 'Inconsolata', monospace;
         }
         
         span {
