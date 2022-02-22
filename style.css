@@ -2,11 +2,11 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: pink;
-    overflow: hidden;
 }
 
 .container {
-    width: 100vw;
+  overflow: hidden;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -156,6 +156,7 @@ h2 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        overflow: visible;
         }
         
         .card {
