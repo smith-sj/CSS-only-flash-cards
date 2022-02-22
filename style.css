@@ -1,12 +1,12 @@
 body {
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     background-color: pink;
+    overflow: hidden;
 }
 
 .container {
-  overflow: hidden;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
   display: flex;
