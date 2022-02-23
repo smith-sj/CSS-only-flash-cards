@@ -76,10 +76,11 @@ h1 {
 span {
   color: black;
   text-decoration: none;
-  font-size: 4vw;
+  font-size: 4.5vw;
   display: block;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 h2 {
   writing-mode: vertical-rl;
@@ -192,6 +193,7 @@ input:checked + #card1 {
 input:checked + #card2 {
   transform: translateY(-35vw) translateX(-9vw) rotate(0deg);
 }
+
 
 #card3 {
     animation: fanout3 1s;
@@ -396,53 +398,53 @@ input:checked + #card5 {
 
         
         #card1 {
-        transform: translateY(0) translateX(-160px) rotate(-9deg);
+        transform: translateY(0) translateX(-120px) rotate(-13deg);
         z-index: 0;
         }
 
         input:checked + #card1 {
-        transform: translateY(-200px) translateX(-180px) rotate(0deg);
+        transform: translateY(-200px) translateX(-120px) rotate(0deg);
         }
         
         #card2 {
-        transform: translateY(0px) translateX(-100px) rotate(-6deg);
+        transform: translateY(0px) translateX(-80px) rotate(-8deg);
         z-index: 1;
         }
 
         
         input:checked + #card2 {
-        transform: translateY(-200px) translateX(-120px) rotate(0deg);
+        transform: translateY(-200px) translateX(-80px) rotate(0deg);
         }  
         
         #card3 {
-        transform: rotate(-3deg) translateX(-40px);
+        transform: rotate(-3deg) translateX(-30px);
         z-index: 2;
         }
 
         input:checked + #card3 {
-          transform: translateY(-200px) translateX(-60px) rotate(0deg);
+          transform: translateY(-200px) translateX(-30px) rotate(0deg);
         }
         
         #card4 {
-        transform: translateY(0px) translateX(20px) rotate(0deg);
+        transform: translateY(0px) translateX(10px) rotate(1deg);
         z-index: 3;
         }
 
         input:checked + #card4 {
-          transform: translateY(-200px) translateX(5px) rotate(0deg);
+          transform: translateY(-200px) translateX(10px) rotate(0deg);
       }
         
         #card5 {
-        transform: translateY(0) translateX(80px) rotate(3deg);
+        transform: translateY(0) translateX(60px) rotate(4deg);
         z-index: 4;
         }
 
         input:checked + #card5 {
-          transform: translateY(-200px) translateX(65px) rotate(0deg);
+          transform: translateY(-200px) translateX(60px) rotate(0deg);
           }
         
         #card6 {
-        transform: translateY(0) translateX(140px) rotate(6deg);
+        transform: translateY(0) translateX(100px) rotate(10deg);
         z-index: 5;
         }
         
