@@ -239,6 +239,7 @@ h2 {
         span {
         font-size: 30px;
         display: block;
+        margin-bottom: 10px;
         }
         
         h2 {
@@ -246,12 +247,33 @@ h2 {
         font-size: 30px;
         /* margin: 10px; */
         }
-        
+
         .card a {
-            display: inline-block;
-            margin: 10px 0;
-            font-size: 20px;
-        }
+          display: inline-block;
+          margin-top: 5px;
+          font-size: 20px;
+          color: red;
+      }
+      
+      .cardBody a:first-child {
+        text-decoration: none;
+      }
+      
+      .card a:last-child {
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        color: white;
+        background: red;
+        border-radius: 20px;
+        border: 2px solid red;
+      }
+      
+      .card a:last-child:hover {
+        color: red;
+        background: white;
+        border: 2px solid red;
+      }
         
         #card1 {
         transform: translateY(0) translateX(-160px) rotate(-9deg);
