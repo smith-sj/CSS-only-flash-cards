@@ -27,7 +27,7 @@ body {
     border-radius: 15px;
     border: 1px solid white;
     background: white;
-    transition: 2s;
+    transition: 1s;
     box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
     padding-top: 5px;
     text-align: center;
@@ -36,7 +36,10 @@ body {
   .cardBody {
       padding: 1vw;
       text-align: center;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
       flex-grow: 1;
   }
 
@@ -96,7 +99,8 @@ h2 {
   text-decoration: none;
 }
 
-.card a:last-child {
+.card a:last-child, .titleCard a:last-child {
+  margin-top: 3vw;
   text-decoration: none;
   font-weight: bold;
   padding: 1vw;
@@ -106,23 +110,87 @@ h2 {
   border: 2px solid red;
 }
 
-.card a:last-child:hover {
+.card a:last-child:hover, .titleCard a:last-child:hover {
   color: red;
   background: white;
   border: 2px solid red;
 }
 
+
+@keyframes fanout1 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0) translateX(-12vw) rotate(-9deg);
+  }
+}
+
+@keyframes fanout2 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0px) translateX(-7vw) rotate(-6deg);
+  }
+}
+
+@keyframes fanout3 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: rotate(-3deg) translateX(-2vw);
+  }
+}
+
+@keyframes fanout4 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0px) translateX(3vw) rotate(0deg);
+  }
+}
+
+@keyframes fanout5 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0) translateX(8vw) rotate(3deg);
+  }
+}
+
+@keyframes fanout6 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0) translateX(13vw) rotate(6deg);
+  }
+}
+
+
 #card1 {
+  animation: fanout1 1s;
   transform: translateY(0) translateX(-12vw) rotate(-9deg);
   z-index: 0;
 }
 
-#card1:target{
+input:checked ~ #card1 {
   transform: translateY(-35vw) translateX(-15vw) rotate(0deg);
   z-index: 0;
 }
 
 #card2 {
+  animation: fanout2 1s;
   transform: translateY(0px) translateX(-7vw) rotate(-6deg);
   z-index: 1;
 }
@@ -132,6 +200,7 @@ h2 {
 }
 
 #card3 {
+    animation: fanout3 1s;
     transform: rotate(-3deg) translateX(-2vw);
   z-index: 2;
 }
@@ -141,6 +210,7 @@ h2 {
 }
 
 #card4 {
+  animation: fanout4 1s;
   transform: translateY(0px) translateX(3vw) rotate(0deg);
   z-index: 3;
 }
@@ -150,6 +220,7 @@ h2 {
 }
 
 #card5 {
+  animation: fanout5 1s;
   transform: translateY(0) translateX(8vw) rotate(3deg);
   z-index: 4;
 }
@@ -159,6 +230,7 @@ h2 {
 }
 
 #card6 {
+  animation: fanout6 1s;
   transform: translateY(0) translateX(13vw) rotate(6deg);
   z-index: 5;
 }
@@ -194,7 +266,7 @@ h2 {
             border-radius: 15px;
             border: 1px solid white;
             background: white;
-            transition: 2s;
+            transition: 1s;
             box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
             padding-top: 5px;
             text-align: center;
@@ -218,7 +290,6 @@ h2 {
         width: 300px;
             height: calc(300px * 1.4);
         border-radius: 15px;
-        border: 1px solid aqua;
         background: aquamarine;
         box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
         }
