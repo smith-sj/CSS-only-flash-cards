@@ -81,6 +81,9 @@ span {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.signature {
+  font-size: 3.5vw;
+}
 
 h2 {
   writing-mode: vertical-rl;
@@ -307,6 +310,10 @@ input:checked + #card5 {
         font-size: 25px;
         display: block;
         margin-bottom: 10px;
+        }
+
+        .signature {
+          font-size: 18px;
         }
         
         h2 {
