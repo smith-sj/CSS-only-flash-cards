@@ -83,7 +83,7 @@ span {
 
 h2 {
   writing-mode: vertical-rl;
-  font-size: 4vw;
+  font-size: 5vw;
   margin: 1vw;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -310,16 +310,28 @@ input:checked + #card5 {
         h2 {
         writing-mode: vertical-rl;
         font-size: 30px;
-        /* margin: 10px; */
+        margin: 15px 0;
         }
 
-        .card a {
-          display: inline-block;
-          margin-top: 5px;
+        a {
           font-size: 20px;
+          margin-top: 20px;
+          display: inline-block;
+          text-decoration: none;
+          font-weight: bold;
+          padding: 10px;
+          color: white;
+          background: red;
+          border-radius: 25px;
+          border: 2px solid red;
+        }
+        
+        a:hover {
           color: red;
-      }
-      
+          background: transparent;
+          border: 2px solid red;
+        }
+
 
       @keyframes fanout1 {
         from {
