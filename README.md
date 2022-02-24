@@ -37,4 +37,4 @@ The result is smooth, functional and very hacky.
 
 ## Conclusion
 
-I learned a lot from doing this little project, and as a bonus I also got more comfortable with using branching and merging in git. I could use this as some sort of menu on a portfolio site or something, but due to its lack of accessibility I should probably wait to learn JS and implement it in a more modern way.
+I learned a lot from doing this little project, and as a bonus I got more comfortable branching and merging in git. I could use this as some sort of menu on a portfolio site or something, but due to its lack of accessibility I should probably wait to learn JS and implement it in a more modern way.
