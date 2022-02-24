@@ -9,7 +9,7 @@ The title pretty much says it all, I decided to put my recently acquired CSS kno
 - Flexbox layout
 - Building Mobile First
 - The power of the `calc()` CSS function
-- The ***Checkbox Hack*** *(which is fun but not appropriate for most projects)*
+- The ***Checkbox Hack*** 
 
 
 ## What were some challenges I faced?
