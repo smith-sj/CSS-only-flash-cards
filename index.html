@@ -1,60 +1,73 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>HTTP Flash Cards - Home</title>
+    <meta name="author" content="Stephen Smith">
+    <meta name="description"
+        content="HTTP Flash Cards is a learning experiment, created by Stephen Smith solely to improve his CSS skills. As this site was created using HTML and CSS only, it is not considered to be accessible to all. If you would like to learn about HTTP in a more accessible environment, checkout https://developer.mozilla.org/en-US/docs/Web/HTTP">
 </head>
 
 <body>
     <div class="container">
-
-        <div class="card" id="card1">
-                <h2>100 - 199</h2>
-                <div class="cardBody">
+        <input type="checkbox" id="checkbox1" hidden />
+        <label class="card" id="card1" for="checkbox1">
+            <h2>100 - 199</h2>
+            <div class="cardBody">
                 <span>Information Responses </span>
-                <a href="./onehundreds">Practice 100's</a>
+                <a href="./100s.html">Practice 100's</a>
             </div>
-        </div> 
-      
-        <div class="card" id="card2">
-                <h2>200 - 299</h2>
-                <div class="cardBody">
-                    <span>Successful Responses </span>
-                    <a href="./onehundreds">Practice 200's</a>
-                </div>
+        </label>
+
+        <input type="checkbox" id="checkbox2" hidden>
+        <label class="card" id="card2" for="checkbox2">
+            <h2>200 - 299</h2>
+            <div class="cardBody">
+                <span>Successful Responses </span>
+                <a href="./200s.html">Practice 200's</a>
+            </div>
+        </label>
+
+
+        <input type="checkbox" id="checkbox3" hidden>
+        <label class="card" id="card3" for="checkbox3">
+            <h2>300 - 399</h2>
+            <div class="cardBody">
+                <span>Redirection Messages </span>
+                <a href="./300s.html">Practice 300's</a>
+            </div>
+        </label>
+
+        <input type="checkbox" id="checkbox4" hidden>
+        <label class="card" id="card4" for="checkbox4">
+            <h2>400 - 499</h2>
+            <div class="cardBody">
+                <span>Client Error Responses</span>
+                <a href="./400s.html">Practice 400's</a>
+            </div>
+        </label>
+
+        <input type="checkbox" id="checkbox5" hidden>
+        <label class="card" id="card5" for="checkbox5">
+            <h2>500 - 599</h2>
+            <div class="cardBody">
+                <span>Server Error Responses </span>
+                <a href="./500s.html">Practice 500's</a>
+            </div>
+        </label>
+
+        <div class="titleCard" id="card6">
+            <h1>HTTP FLASH CARDS</h1>
+            <span class="titleSpan">What are these status codes?</span><br>
+            <span class="signature">by Stephen Smith</span>
         </div>
 
-      
-        <div class="card" id="card3">
-                <h2>300 - 399</h2>
-                <div class="cardBody">
-                <span>Redirection Messages </span>
-                <a href="./onehundreds">Practice 300's</a>
-            </div>
-        </div>
-      
-        <div class="card" id="card4">
-                <h2>400 - 499</h2>
-                <div class="cardBody">
-                <span>Client Error Responses</span>
-                <a href="./onehundreds">Practice 400's</a>
-            </div>
-        </div>
-      
-        <div class="card" id="card5">
-                <h2>500 - 599</h2>
-                <div class="cardBody">
-                <span>Server Error Responses </span>
-                <a href="./onehundreds">Practice 500's</a>
-            </div>
-        </div>
-        
-        <div class="titleCard" id="card6">
-          <h1>HTTP FLASH CARDS</h1>
-          <span>What are these status codes?</span>
-        </div>
-      
-      </div>
+    </div>
 
 </body>
+
+</html>

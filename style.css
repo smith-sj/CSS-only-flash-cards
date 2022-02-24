@@ -1,46 +1,54 @@
+/* MAIN LAYOUT */
+
 body {
-    width: 95vw;
-    height: 100vh;
-    background-color: pink;
-    overflow: hidden;
+  width: 95vw;
+  height: 80vh;
+  background-color: pink;
+  overflow: hidden;
+  margin: 15vh auto 0;
 }
+
 
 .container {
   width: 100%;
-  height: 100vh;
-  margin: 0 auto;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-  .card {
-    position:absolute;
-    box-sizing: border-box;
-    display: flex;
-    align-items: start;
-    width: 60vw;
-    height: calc(60vw * 1.4);
-    border-radius: 15px;
-    border: 1px solid white;
-    background: white;
-    transition: 2s;
-    box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
-    padding-top: 5px;
-    text-align: center;
-  }
+/* CARDS LAYOUT */
 
-  .cardBody {
-      padding: 1vw;
-      text-align: center;
-      display: block;
-      flex-grow: 1;
-  }
+.card {
+  position:absolute;
+  box-sizing: border-box;
+  display: flex;
+  align-items: start;
+  width: 60vw;
+  height: calc(60vw * 1.4);
+  border-radius: 15px;
+  border: 1px solid white;
+  background: white;
+  transition: 1s;
+  box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
+  padding-top: 5px;
+  text-align: center;
+}
+
+.cardBody {
+  padding: 1vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-grow: 1;
+}
 
   
 .titleCard {
-    padding: 2vw;
+  padding: 2vw;
   box-sizing: border-box;
   text-align: center;
   display: flex;
@@ -54,13 +62,7 @@ body {
   box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
 }
 
-.titleBlock {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-}
-
+/* TYPOGRAPHY */
 
 h1 {
   font-size: 10vw;
@@ -68,215 +70,344 @@ h1 {
 
 }
 
-span {
-  font-size: 6vw;
-  display: block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 h2 {
   writing-mode: vertical-rl;
-  font-size: 4vw;
+  font-size: 5vw;
   margin: 1vw;
   font-family: 'Courier New', Courier, monospace;
 }
 
-.card a {
-    display: block;
-    margin-top: 3vw;
-    font-size: 4vw;
+span {
+  color: black;
+  font-size: 4.5vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.signature {
+  font-size: 3.5vw;
+}
+
+/* LINKS */
+
+a {
+  font-size: 4vw;
+  margin-top: 4vw;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1vw;
+  color: white;
+  background: red;
+  border-radius: 2vw;
+  border: 2px solid red;
+}
+
+a:hover {
+  color: red;
+  background: transparent;
+}
+
+/* FANOUT ANIMATION */
+
+@keyframes fanout1 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0) translateX(-12vw) rotate(-9deg);
+  }
+}
+
+@keyframes fanout2 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0px) translateX(-7vw) rotate(-6deg);
+  }
+}
+
+@keyframes fanout3 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: rotate(-3deg) translateX(-2vw);
+  }
+}
+
+@keyframes fanout4 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0px) translateX(3vw) rotate(0deg);
+  }
+}
+
+@keyframes fanout5 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0) translateX(8vw) rotate(3deg);
+  }
+}
+
+@keyframes fanout6 {
+  from {
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+
+  to {
+    transform: translateY(0) translateX(13vw) rotate(6deg);
+  }
+}
+
+/* ON-TAP ANIMATION (RADIO BUTTON HACK) */
+
 #card1 {
+  animation: fanout1 1s;
   transform: translateY(0) translateX(-12vw) rotate(-9deg);
   z-index: 0;
 }
 
+
+input:checked + #card1 {
+  transform: translateY(-35vw) translateX(-15vw) rotate(0deg);
+}
+
+
 #card2 {
+  animation: fanout2 1s;
   transform: translateY(0px) translateX(-7vw) rotate(-6deg);
   z-index: 1;
 }
 
+
+input:checked + #card2 {
+  transform: translateY(-35vw) translateX(-9vw) rotate(0deg);
+}
+
+
 #card3 {
+    animation: fanout3 1s;
     transform: rotate(-3deg) translateX(-2vw);
   z-index: 2;
 }
 
+input:checked + #card3 {
+  transform: translateY(-35vw) translateX(-3vw) rotate(0deg);
+}
+
 #card4 {
+  animation: fanout4 1s;
   transform: translateY(0px) translateX(3vw) rotate(0deg);
   z-index: 3;
 }
 
+input:checked + #card4 {
+  transform: translateY(-35vw) translateX(3vw) rotate(0deg);
+}
+
 #card5 {
+  animation: fanout5 1s;
   transform: translateY(0) translateX(8vw) rotate(3deg);
   z-index: 4;
 }
 
+input:checked + #card5 {
+  transform: translateY(-35vw) translateX(9vw) rotate(0deg);
+}
+
 #card6 {
+  animation: fanout6 1s;
   transform: translateY(0) translateX(13vw) rotate(6deg);
   z-index: 5;
 }
 
-#card1:hover {
-    transform: translateY(-30vw) translateX(-18vw) rotate(0deg);
-    z-index: 0;
-  }
-  
-
-#card2:hover {
-  transform: translateY(-30vw) translateX(-13vw) rotate(0deg);
-}
-
-#card3:hover {
-    transform: translateY(-30vw) translateX(-8vw) rotate(0deg);
-}
-
-#card4:hover {
-    transform: translateY(-30vw) translateX(-3vw) rotate(0deg);
-}
-
-#card5:hover {
-  transform: translateY(-30vw) translateX(2vw) rotate(0deg);
-}
+/* DESKTOP & TABLET SIZING */
 
 @media screen and (min-width:800px) {
 
-        body {
-            width: 100%;
-            height: 100vh;
-            background-color: pink;
-            overflow: hidden;
-        }
+  /* MAIN LAYOUT RESIZE */
+
+  body {
+    width: 100%;
+    height: 100vh;
+  }
         
-        .container {
-            width: 500px;
-        height: 100vh;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        overflow: visible;
-        }
+  .container {
+    width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  /* CARD LAYOUT RESIZE */
         
-        .card {
-            position:absolute;
-            box-sizing: border-box;
-            display: flex;
-            align-items: start;
-            width: 300px;
-            height: calc(300px * 1.4);
-            border-radius: 15px;
-            border: 1px solid white;
-            background: white;
-            transition: 2s;
-            box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
-            padding-top: 5px;
-            text-align: center;
-        }
+  .card {
+    width: 300px;
+    height: calc(300px * 1.4);
+    border-radius: 15px;
+    border: 1px solid white;
+    transition: 1s;
+    box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
+    padding-top: 5px;
+  }
         
-        .cardBody {
-            padding: 10px;
-            text-align: center;
-            display: block;
-            /* flex-grow: 1; */
-        }
+  .cardBody {
+    padding: 10px;
+  }
+            
+  .titleCard {
+    padding: 10px;
+    width: 300px;
+    height: calc(300px * 1.4);
+    border-radius: 15px;
+    box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
+  }
+
+  /* TYPOGRAPHY RESIZE */
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin: 15px 0;
+  }
         
+  span {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .signature {
+    font-size: 18px;
+  }
+
+  /* LINK RESIZE */
         
-        .titleCard {
-            padding: 10px;
-        box-sizing: border-box;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 300px;
-            height: calc(300px * 1.4);
-        border-radius: 15px;
-        border: 1px solid aqua;
-        background: aquamarine;
-        box-shadow: -10px -5px 5px 5px rgb(0 0 0 / 0.2);
-        }
+  a {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid red;
+  }
+
+  /* FANOUT ANIMATION RE-POSITION */
         
-        .titleBlock {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-            align-items: center;
-        }
-        
-        
-        h1 {
-        font-size: 50px;
-        font-family: 'Inconsolata', monospace;
-        }
-        
-        span {
-        font-size: 30px;
-        display: block;
-        }
-        
-        h2 {
-        writing-mode: vertical-rl;
-        font-size: 30px;
-        /* margin: 10px; */
-        }
-        
-        .card a {
-            display: block;
-            margin-top: 10px;
-            font-size: 20px;
-        }
-        
-        #card1 {
-        transform: translateY(0) translateX(-160px) rotate(-9deg);
-        z-index: 0;
-        }
-        
-        #card2 {
-        transform: translateY(0px) translateX(-100px) rotate(-6deg);
-        z-index: 1;
-        }
-        
-        #card3 {
-            transform: rotate(-3deg) translateX(-40px);
-        z-index: 2;
-        }
-        
-        #card4 {
-        transform: translateY(0px) translateX(20px) rotate(0deg);
-        z-index: 3;
-        }
-        
-        #card5 {
-        transform: translateY(0) translateX(80px) rotate(3deg);
-        z-index: 4;
-        }
-        
-        #card6 {
-        transform: translateY(0) translateX(140px) rotate(6deg);
-        z-index: 5;
-        }
-        
-        #card1:hover {
-            transform: translateY(-200px) translateX(-200px) rotate(0deg);
-            z-index: 0;
-        }
-        
-        
-        #card2:hover {
-        transform: translateY(-200px) translateX(-160px) rotate(0deg);
-        }
-        
-        #card3:hover {
-            transform: translateY(-200px) translateX(-100px) rotate(0deg);
-        }
-        
-        #card4:hover {
-            transform: translateY(-200px) translateX(-40px) rotate(0deg);
-        }
-        
-        #card5:hover {
-        transform: translateY(-200px) translateX(20px) rotate(0deg);
-        }
+  @keyframes fanout1 {
+    from {
+      transform: translateY(0) translateX(0) rotate(0);
     }
+      
+    to {
+      transform: translateY(0) translateX(-120px) rotate(-13deg);
+    }
+  }
+      
+  @keyframes fanout2 {
+    from {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+      
+    to {
+      transform: translateY(0px) translateX(-80px) rotate(-8deg);
+    }
+  }
+      
+  @keyframes fanout3 {
+    from {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+      
+    to {
+      transform: rotate(-3deg) translateX(-30px);
+    }
+  }
+      
+  @keyframes fanout4 {
+    from {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+      
+    to {
+      transform: translateY(0px) translateX(10px) rotate(1deg);
+    }
+  }
+      
+  @keyframes fanout5 {
+    from {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+      
+    to {
+      transform: translateY(0) translateX(60px) rotate(4deg);
+    }
+  }
+      
+  @keyframes fanout6 {
+    from {
+      transform: translateY(0) translateX(0) rotate(0);
+    }
+      
+    to {
+      transform: translateY(0) translateX(100px) rotate(10deg);
+    }
+  }
+      
+  /* ON-TAP ANIMATION RE-POSITION */
+        
+  #card1 {
+    transform: translateY(0) translateX(-120px) rotate(-13deg);
+  }
+
+  input:checked + #card1 {
+    transform: translateY(-200px) translateX(-120px) rotate(0deg);
+  }
+        
+  #card2 {
+    transform: translateY(0px) translateX(-80px) rotate(-8deg);
+  }
+
+        
+  input:checked + #card2 {
+    transform: translateY(-200px) translateX(-80px) rotate(0deg);
+  }  
+        
+  #card3 {
+    transform: rotate(-3deg) translateX(-30px);
+  }
+
+  input:checked + #card3 {
+    transform: translateY(-200px) translateX(-30px) rotate(0deg);
+  }
+        
+  #card4 {
+    transform: translateY(0px) translateX(10px) rotate(1deg);
+  }
+
+  input:checked + #card4 {
+    transform: translateY(-200px) translateX(10px) rotate(0deg);
+  }
+        
+  #card5 {
+    transform: translateY(0) translateX(60px) rotate(4deg);
+  }
+
+  input:checked + #card5 {
+    transform: translateY(-200px) translateX(60px) rotate(0deg);
+  }
+        
+  #card6 {
+    transform: translateY(0) translateX(100px) rotate(10deg);
+  }
+}
