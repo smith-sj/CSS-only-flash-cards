@@ -2,7 +2,7 @@
 
 https://smith-sj.github.io/CSS-only-flash-cards/
 
-The title pretty much says it all, I decided to put my recently acquired CSS knowledge to the test by creating some functional flash cards using only CSS. As we were also learning about HTTP, it felt like a fitting theme for the project. The term *“mobile first”* was also thrown around a lot in class this week, so I set out to make this project functional on mobile first and then adjusted for desktop. 
+I decided to put my recently acquired CSS knowledge to the test by creating some functional flash cards using only CSS. As we were also learning about HTTP, it felt like a fitting theme for the project. The term *“mobile first”* was also thrown around a lot in class this week, so I set out to make this project functional on mobile first and then adjusted for desktop. 
 
 ## What are some cool things I learned?
 
